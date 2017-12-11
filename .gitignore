@@ -1,0 +1,8 @@
+# Database files
+*.sqlite3
+
+# Logs
+
+# Virtual environment files
+chemotracker/chemotracker/*
+
