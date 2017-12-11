@@ -17,11 +17,10 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from rest_framework import routers
 from rest_framework.authtoken import views as default_views
-from usermanagement.views import login
 
-router = routers.DefaultRouter()
 urlpatterns = [
-    url(r'^', include(router.urls)),
-    url(r'^login', login)
-    #url(r'^register/', views.register_user)
+    url(r'^rest-auth/', include('rest_auth.urls')),
+    url(r'^rest-auth/registration/', include('rest_auth.registration.urls'))
+    # url(r'^login', login),
+    # url(r'^register/', register_patient)
 ]
