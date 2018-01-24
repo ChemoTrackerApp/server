@@ -25,7 +25,7 @@ SECRET_KEY = '=45(!ei=0z5q!kcu8z-x_e+ae437&4qtxb58+4hhgh*a)dp9+h'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [*]
 
 # Settings for the REST Framework
 REST_FRAMEWORK = {
@@ -93,13 +93,23 @@ WSGI_APPLICATION = 'chemotracker.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'chemotracker',
+        'USER': 'chemotracker',
+        'PASSWORD': 'password',
+        'HOST': 'chemotracker.chnj6ocrj002.us-east-2.rds.amazonaws.com',
+        'PORT': '5432',
+    }   
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
