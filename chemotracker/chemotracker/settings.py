@@ -25,7 +25,7 @@ SECRET_KEY = '=45(!ei=0z5q!kcu8z-x_e+ae437&4qtxb58+4hhgh*a)dp9+h'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [*]
+ALLOWED_HOSTS = ['*']
 
 # Settings for the REST Framework
 REST_FRAMEWORK = {
