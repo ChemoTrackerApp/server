@@ -20,7 +20,6 @@ from rest_framework.authtoken import views as default_views
 
 urlpatterns = [
     url(r'^rest-auth/', include('rest_auth.urls')),
-    url(r'^rest-auth/registration/', include('rest_auth.registration.urls'))
-    # url(r'^login', login),
-    # url(r'^register/', register_patient)
+    url(r'^rest-auth/registration/', include('rest_auth.registration.urls')),
+    url(r'^symptom-tracker/', include('symptomtracker.urls'))
 ]
