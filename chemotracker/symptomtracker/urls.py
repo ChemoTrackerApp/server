@@ -3,5 +3,5 @@ from django.conf.urls import url
 from . import views	
 
 urlpatterns = [
-    url(r"^$", views.symptoms, name="get_symptoms"),
+    url(r"^symptoms/$", views.symptoms, name="get_symptoms"),
 ]
