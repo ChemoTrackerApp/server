@@ -150,5 +150,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # Authentication Configs
-ACCOUNT_AUTHENTICATION_METHOD (=”username” | “email” | “username_email”)
+ACCOUNT_AUTHENTICATION_METHOD "username_email"
 ACCOUNT_EMAIL_REQUIRED=True
