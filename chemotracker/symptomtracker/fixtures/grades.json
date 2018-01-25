@@ -1,0 +1,30 @@
+[  
+   {  
+      "model":"symptomtracker.grade",
+      "pk":1,
+      "fields":{  
+         "name":"None"
+      }
+   },
+   {  
+      "model":"symptomtracker.grade",
+      "pk":2,
+      "fields":{  
+         "name":"Mild"
+      }
+   },
+   {  
+      "model":"symptomtracker.grade",
+      "pk":3,
+      "fields":{  
+         "name":"Moderate"
+      }
+   },
+   {  
+      "model":"symptomtracker.grade",
+      "pk":4,
+      "fields":{  
+         "name":"Severe"
+      }
+   }
+]
