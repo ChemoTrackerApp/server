@@ -8,7 +8,6 @@ class PatientProfile(models.Model):
     user = models.OneToOneField(User, to_field='id', primary_key=True)
     first_name = models.CharField(max_length=30, blank=True)
     last_name = models.CharField(max_length=30, blank=True)
-    email = models.CharField(max_length=60, blank=True)
 
     class Meta:
         verbose_name = _("patient profile")
@@ -16,6 +15,14 @@ class PatientProfile(models.Model):
 
     def __str__(self):
         return "%s %s" % (self.first_name, self.last_name)
+
+    def as_dict(self):
+        return {
+            "id": self.id,
+            "firstName": self.first_name,
+            "lastName": self.first_name,
+            "firstName": self.user.email
+        }
 
 @receiver(post_save, sender=User)
 def create_patient_profile(sender, instance, created, **kwargs):
