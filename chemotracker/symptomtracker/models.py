@@ -48,8 +48,6 @@ class SymptomGrade(models.Model):
             "id": self.id,
             "name": self.grade.name,
             "description": self.description
-            # "patientFriendlyDescription": self.grading_patient_friendly,
-            # "patientFriendlyIntervention": self.intervention_patient_friendly
         }
 
 class PatientSymptomGrade(models.Model):

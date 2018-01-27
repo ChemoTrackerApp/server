@@ -53,7 +53,8 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'rest_auth.registration',
-    'symptomtracker'
+    'symptomtracker',
+    'patientprofile'
 ]
 
 SITE_ID = 1
