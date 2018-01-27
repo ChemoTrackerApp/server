@@ -17,7 +17,7 @@ def get_profile(request):
     if user_id is None:
         return HttpResponseBadRequest('Need to specify user_id as URL Parameter')
 
-    user = User.objects.get(user=user_id)
+    user = User.objects.get(id=user_id)
 
     if user is None:
         return HttpResponseNotFound('User not found!')
