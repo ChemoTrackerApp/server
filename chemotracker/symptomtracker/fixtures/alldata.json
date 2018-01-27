@@ -1,0 +1,167 @@
+[  
+   {  
+      "model":"symptomtracker.symptomgrade",
+      "pk":1,
+      "fields":{
+         "symptom":1,
+         "grade":1,
+         "description":"Patient is experiencing no queasy sensation or urge to vomit",
+         "grading_patient_friendly":"No symptoms",
+         "intervention_patient_friendly":"Glad to hear you’re doing well! Check back if anything changes."
+      }
+   },
+   {  
+      "model":"symptomtracker.symptomgrade",
+      "pk":2,
+      "fields":{
+         "symptom":1,
+         "grade":2,
+         "description":"Loss of appetite without alteration in eating habits",
+         "grading_patient_friendly":"Don’t always feel like eating but still able to have regular meals",
+         "intervention_patient_friendly":"1. Take your antinausea medications as directed by your oncology team.\\n2. Try some of these tips:\\n-  Eat small, frequent and bland meals\\n-  Avoid spicy and fatty foods\\n-  Eat at times of day when feelings of nausea are less\\n-  Try eating cold foods if smells from hot food are bothersome\\n-  Avoid cooking and strong smells\\n-  Drink small amounts of fluid regularly between meals"
+      }
+   },
+   {  
+      "model":"symptomtracker.symptomgrade",
+      "pk":3,
+      "fields":{
+         "symptom":1,
+         "grade":3,
+         "description":"Oral intake decreased without significant weight loss, dehydration or malnutrition",
+         "grading_patient_friendly":"Not eating regular meals, but still able to eat and drink when able to. Slight loss of weight.",
+         "intervention_patient_friendly":"1. Take your antinausea medications as directed by your oncology team.\\n2. Contact your oncology team for further management."
+      }
+   },
+   {  
+      "model":"symptomtracker.symptomgrade",
+      "pk":4,
+      "fields":{
+         "symptom":1,
+         "grade":4,
+         "description":"Inadequate oral caloric or fluid intake; tube feeding, TPN, or hospitalization indicated",
+         "grading_patient_friendly":"Unable to take in/keep down food or fluids, significant weight loss, signs of dehydration",
+         "intervention_patient_friendly":"Contact your oncology team or family physician. If they cannot be reached, please visit your closest emergency department for evaluation."
+      }
+   },
+   {  
+      "model":"symptomtracker.symptomgrade",
+      "pk":5,
+      "fields":{
+         "symptom":2,
+         "grade":1,
+         "description":"Patient is experiencing no reflexive act of ejecting the contents of the stomach through the mouth.",
+         "grading_patient_friendly":"No Nausea or Vomiting",
+         "intervention_patient_friendly":"Glad you’re doing ok!"
+      }
+   },
+   {  
+      "model":"symptomtracker.symptomgrade",
+      "pk":6,
+      "fields":{
+         "symptom":2,
+         "grade":2,
+         "description":"1 - 2 episodes (separated by 5 minutes) in 24 hrs",
+         "grading_patient_friendly":"Vomited between 1-2 times in 24hs",
+         "intervention_patient_friendly":"Have you taken your ‘breakthrough’ nausea medication yet?\\nTry some of these tips to help make you feel better:\\n- Rehydrate: sip water and other fluids and suck on ice chips, popsicles or frozen fruits.\\n- Eat small frequent meals and limit spicy, fried foods and foods with strong smells.\\n- Have you had regular bowel movements lately? Severe constipation may cause nausea and vomiting.\\n- Focus attention on  TV, music, reading, fresh air or walking."
+      }
+   },
+   {  
+      "model":"symptomtracker.symptomgrade",
+      "pk":7,
+      "fields":{
+         "symptom":2,
+         "grade":3,
+         "description":"3 - 5 episodes (separated by 5 minutes) in 24 hrs.",
+         "grading_patient_friendly":"Vomited between 3-5 times in 24hs.",
+         "intervention_patient_friendly":"Make sure you’re taking your ‘as needed’ nausea medication regularly. If it’s not working, notify your oncology team. They may be able to help. You can always try these tips to help make you feel better:\\n- Rehydrate: sip water and other fluids and suck on ice chips, popsicles or frozen fruits.\\n- Eat small frequent meals and limit spicy, fried foods and foods with strong smells.\\n- Have you had regular bowel movements lately? Severe constipation may cause nausea and vomiting.\\n- Focus attention on  TV, music, reading, fresh air or walking."
+      }
+   },
+   {  
+      "model":"symptomtracker.symptomgrade",
+      "pk":8,
+      "fields":{
+         "symptom":2,
+         "grade":4,
+         "description":">=6 episodes (separated by 5 minutes) in 24 hrs; tube feeding, TPN or hospitalization indicated.",
+         "grading_patient_friendly":"Vomited more than 6 times in 24hr.",
+         "intervention_patient_friendly":"Ok, it’s time for you to seek medical attention! Please visit the nearest hospital for emergency care, especially if your symptoms are getting worse."
+      }
+   },
+      {  
+      "model":"symptomtracker.symptomgrade",
+      "pk":9,
+      "fields":{
+         "symptom":3,
+         "grade":2,
+         "description":"Fatigue relieved by rest.",
+         "grading_patient_friendly":"You’re tired, but resting makes you feel better.",
+         "intervention_patient_friendly":"Believe it or not, activity actually helps improve symptoms of tiredness. Try and stay active through the day."
+      }
+   },
+   {  
+      "model":"symptomtracker.symptomgrade",
+      "pk":10,
+      "fields":{
+         "symptom":3,
+         "grade":3,
+         "description":"Fatigue not relieved by rest; limiting instrumental ADL.",
+         "grading_patient_friendly":"Rest does not help your feelings of  tiredness & you cannot do everyday activities (examples: making food, doing laundry, cleaning the house).",
+         "intervention_patient_friendly":"Try and stay active through the day. You may want to contact your oncology team to see if a decrease in your therapy is appropriate."
+      }
+   },
+   {  
+      "model":"symptomtracker.symptomgrade",
+      "pk":11,
+      "fields":{
+         "symptom":3,
+         "grade":4,
+         "description":"Fatigue not relieved by rest, limiting self care ADL.",
+         "grading_patient_friendly":"Your fatigue is not relieved by rest and you cannot perform self-care (examples: bathing/showering, dressing yourself, eating).",
+         "intervention_patient_friendly":"Sorry your life has been impacted by your fatigue. You should contact your oncology team for advice. They will be able to investigate what is making you feel this way."
+      }
+   },
+      {  
+      "model":"symptomtracker.symptomgrade",
+      "pk":12,
+      "fields":{
+         "symptom":4,
+         "grade":1,
+         "description":"Patient is experiencing no increase in number of stools or ostomy output from baseline.",
+         "grading_patient_friendly":"No symptoms to report.",
+         "intervention_patient_friendly":"Glad you’re doing ok!"
+      }
+   },
+   {  
+      "model":"symptomtracker.symptomgrade",
+      "pk":13,
+      "fields":{
+         "symptom":4,
+         "grade":2,
+         "description":"Increase of less than 4 stools per day over baseline or mild increase in ostomy output.",
+         "grading_patient_friendly":"You have had 1 to 3 bowel movements above what is normal for you in one day.",
+         "intervention_patient_friendly":"There are over the counter medications that can help - talk to your pharmacist! You can also try some of these tips:\\n- Stop using laxatives and stool softeners immediately (e.g. senna/Senokot, docusate, Lax-A-Day)\\n- Rehydrate using fruit juices, broths and/or oral rehydration solution\\n- Avoid high fibre foods, dairy, sugary sports drinks (e.g. Gatorade), fatty or spicy foods\\n- Try the BRAT diet to bulk up the stool and replace electrolytes (bananas, white rice, applesauce and white toast)\\n- Ask your pharmacist if an anti-diarrheal medication is safe for you."
+      }
+   },
+   {  
+      "model":"symptomtracker.symptomgrade",
+      "pk":14,
+      "fields":{
+         "symptom":4,
+         "grade":3,
+         "description":"Increase of 4-6 stools over baseline or moderate increase in ostomy output.",
+         "grading_patient_friendly":"You have had 4 to 6 bowel movements above what is normal for you in one day, or you have had diarrhea for more than 24 hr.",
+         "intervention_patient_friendly":"Have you taken any medications to help stop your loose stools? If it’s not working, and you’ve had symptoms for over 24hrs, please notify your oncology team. They may be able to help. You can also always try these tips to help make you feel better:\\n- Stop using laxatives and stool softeners immediately (e.g. senna/Senokot, docusate, Lax-A-Day)\\n- Rehydrate using fruit juices, broths and/or oral rehydration solution\\n- Avoid high fibre foods, dairy, sugary sports drinks (e.g. Gatorade), fatty or spicy foods\\n- Try the BRAT diet to bulk up the stool and replace electrolytes (bananas, white rice, applesauce and white toast)\\n- Ask your pharmacist if an anti-diarrheal medication is safe for you."
+      }
+   },
+   {  
+      "model":"symptomtracker.symptomgrade",
+      "pk":15,
+      "fields":{
+         "symptom":4,
+         "grade":4,
+         "description":"Increase of more than 6 stools from baseline. Hospitalization indicated.",
+         "grading_patient_friendly":"You have had more than 6 bowel movements above what is normal for you in one day.",
+         "intervention_patient_friendly":"Ok, it’s time for you to seek medical attention! Please visit the nearest hospital for emergency care, especially if your symptoms are getting worse."
+      }
+   }
+]

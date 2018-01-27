@@ -1,0 +1,30 @@
+[  
+   {  
+      "model":"symptomtracker.symptom",
+      "pk":1,
+      "fields":{  
+         "name":"Nausea"
+      }
+   },
+   {  
+      "model":"symptomtracker.symptom",
+      "pk":2,
+      "fields":{  
+         "name":"Vomiting"
+      }
+   },
+   {  
+      "model":"symptomtracker.symptom",
+      "pk":3,
+      "fields":{  
+         "name":"Fatigue"
+      }
+   },
+   {  
+      "model":"symptomtracker.symptom",
+      "pk":4,
+      "fields":{  
+         "name":"Diarrhea"
+      }
+   }
+]

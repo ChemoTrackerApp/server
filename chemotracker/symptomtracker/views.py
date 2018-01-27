@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse, HttpResponseBadRequest
+from django.http import HttpResponse, HttpResponseBadRequest, HttpResponseNotFound
 from django.views.decorators.http import require_http_methods
 from symptomtracker.models import Symptom, SymptomGrade
 import json
@@ -8,7 +8,7 @@ import json
 def symptoms(request):
     symptoms = Symptom.objects.all()
     response = [ obj.as_dict() for obj in symptoms ]
-    return HttpResponse(json.dumps({"data": response}), content_type='application/json')
+    return HttpResponse(json.dumps({"symptom": response}), content_type='application/json')
 
 @require_http_methods(["GET"])
 def grades(request):
@@ -19,7 +19,7 @@ def grades(request):
     symptom = Symptom.objects.get(name=symptom_name)
 
     if symptom is None:
-        return HttpResponseBadRequest('Symptom not found!')
+        return HttpResponseNotFound('Symptom not found!')
 
     grades = SymptomGrade.objects.filter(symptom=symptom)
 
