@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseBadRequest, HttpResponseNotFound
 from django.views.decorators.http import require_http_methods
@@ -16,12 +17,12 @@ def get_profile(request):
     if user_id is None:
         return HttpResponseBadRequest('Need to specify user_id as URL Parameter')
 
-    user = PatientProfile.objects.get(user=user_id)
+    user = User.objects.get(user=user_id)
 
     if user is None:
         return HttpResponseNotFound('User not found!')
 
-    return HttpResponse(json.dumps({"user": user}), content_type='application/json')
+    return HttpResponse(json.dumps({"user": user.patientprofile}), content_type='application/json')
 
 def update_profile(request):
     user_id = request.GET.get('id')
