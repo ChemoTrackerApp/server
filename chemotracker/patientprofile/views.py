@@ -45,9 +45,9 @@ def users(request):
     query = request.GET.get('query')
     
     if query is None:
-        users = User.objects.all()[:10]
+        users = PatientProfile.objects.all()[:10]
     else:
-        users = User.objects.filter(Q(first_name__icontains=query) | Q(last_name__icontains=query) | Q(email__icontains=query))
+        users = PatientProfile.objects.filter(Q(first_name__icontains=query) | Q(last_name__icontains=query) | Q(email__icontains=query))
 
     response = [ obj.as_dict() for obj in users ]
 
