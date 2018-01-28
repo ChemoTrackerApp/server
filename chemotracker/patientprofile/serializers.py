@@ -6,6 +6,7 @@ from allauth.account.utils import setup_user_email
 
 class RegisterSerializer(serializers.Serializer):
     email = serializers.EmailField(required=allauth_settings.EMAIL_REQUIRED)
+    username = serializers.CharField(required=True, write_only=True)
     first_name = serializers.CharField(required=True, write_only=True)
     last_name = serializers.CharField(required=True, write_only=True)
     password1 = serializers.CharField(required=True, write_only=True)
@@ -30,6 +31,7 @@ class RegisterSerializer(serializers.Serializer):
 
     def get_cleaned_data(self):
         return {
+            'username': self.validated_data.get('username', '')
             'first_name': self.validated_data.get('first_name', ''),
             'last_name': self.validated_data.get('last_name', ''),
             'password1': self.validated_data.get('password1', ''),
