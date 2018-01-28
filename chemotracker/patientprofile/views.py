@@ -1,4 +1,5 @@
 from django.contrib.auth.models import User
+from django.db.models import Q
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseBadRequest, HttpResponseNotFound
 from django.views.decorators.http import require_http_methods
@@ -44,7 +45,7 @@ def users(request):
     query = request.GET.get('query')
     
     if query is None:
-        users = Users.objects.all()[:10]
+        users = User.objects.all()[:10]
     else:
         users = User.objects.filter(Q(first_name__icontains=query) | Q(last_name__icontains=query) | Q(email__icontains=query))
 
