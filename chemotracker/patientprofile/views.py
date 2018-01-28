@@ -46,7 +46,7 @@ def users(request):
     if query is None:
         users = Users.objects.all()[:10]
     else:
-        users = User.objects.filter((first_name__icontains=query) | (last_name__icontains=query) | (email__icontains=query))
+        users = User.objects.filter(Q(first_name__icontains=query) | Q(last_name__icontains=query) | Q(email__icontains=query))
 
     response = [ obj.as_dict() for obj in users ]
 
