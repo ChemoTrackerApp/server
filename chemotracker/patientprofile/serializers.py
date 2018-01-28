@@ -31,7 +31,7 @@ class RegisterSerializer(serializers.Serializer):
 
     def get_cleaned_data(self):
         return {
-            'username': self.validated_data.get('username', '')
+            'username': self.validated_data.get('username', ''),
             'first_name': self.validated_data.get('first_name', ''),
             'last_name': self.validated_data.get('last_name', ''),
             'password1': self.validated_data.get('password1', ''),
