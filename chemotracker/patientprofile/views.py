@@ -47,7 +47,7 @@ def users(request):
     if query is None:
         users = PatientProfile.objects.all()[:10]
     else:
-        users = PatientProfile.objects.filter(Q(user.first_name__icontains=query) | Q(user.last_name__icontains=query) | Q(user.email__icontains=query))
+        users = PatientProfile.objects.filter(Q(user__first_name__icontains=query) | Q(user__last_name__icontains=query) | Q(user__email__icontains=query))
 
     response = [ obj.as_dict() for obj in users ]
 
