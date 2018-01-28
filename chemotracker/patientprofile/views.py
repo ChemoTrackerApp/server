@@ -22,7 +22,7 @@ def get_profile(request):
     if user is None:
         return HttpResponseNotFound('User not found!')
 
-    return HttpResponse(json.dumps({"user": user.patientprofile.as_dict()}), content_type='application/json')
+    return HttpResponse(json.dumps(user.patientprofile.as_dict()), content_type='application/json')
 
 def update_profile(request):
     user_id = request.GET.get('id')
