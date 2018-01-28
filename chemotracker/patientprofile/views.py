@@ -8,9 +8,9 @@ import json
 @require_http_methods(["GET", "POST"])
 def profile(request):
     if request.method == 'GET':
-        get_profile(request)
+        return get_profile(request)
     elif request.method == 'POST':
-        update_profile(request)
+        return update_profile(request)
 
 def get_profile(request):
     user_id = request.GET.get('id')
