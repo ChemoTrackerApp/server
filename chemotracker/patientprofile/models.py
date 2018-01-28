@@ -12,7 +12,7 @@ class PatientProfile(models.Model):
         verbose_name_plural = _("patient profiles")
 
     def __str__(self):
-        return "%s %s" % (self.first_name, self.last_name)
+        return "%s %s" % (self.user.first_name, self.user.last_name)
 
     def as_dict(self):
         return {
