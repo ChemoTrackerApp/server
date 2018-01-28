@@ -39,5 +39,15 @@ def update_profile(request):
     first_name = body['firstName']
     last_name = body['lastName']
 
+@require_http_methods(["GET"])
+def users(request):
+    query = request.GET.get('query')
+    
+    if query is None:
+        users = Users.objects.all()[:10]
+    else:
+        users = User.objects.filter((first_name__icontains=query) | (last_name__icontains=query) | (email__icontains=query))
 
+    response = [ obj.as_dict() for obj in users ]
 
+    return HttpResponse(json.dumps({"users": response}), content_type='application/json')

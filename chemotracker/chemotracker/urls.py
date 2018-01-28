@@ -22,5 +22,5 @@ urlpatterns = [
     url(r'^rest-auth/', include('rest_auth.urls')),
     url(r'^rest-auth/registration/', include('rest_auth.registration.urls')),
     url(r'^symptom-tracker/', include('symptomtracker.urls')),
-    url(r'^profile/', include('patientprofile.urls'))
+    url(r'^users/', include('patientprofile.urls'))
 ]
