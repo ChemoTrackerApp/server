@@ -53,12 +53,13 @@ class SymptomGrade(models.Model):
 class PatientSymptomGrade(models.Model):
     patient = models.ForeignKey(User, on_delete=models.CASCADE)
     symptom = models.ForeignKey('Symptom', on_delete=models.CASCADE)
-    symptom_grade = models.ForeignKey('SymptomGrade', on_delete=models.CASCADE)
+    symptom_grade = models.ForeignKey('Grade', on_delete=models.CASCADE)
     recorded_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
         verbose_name = _("patient symptom grade")
         verbose_name_plural = _("patient symptom grades")
+        ordering = ('recorded_at',)
 
     def __str__(self):
         return "%s: %s" % (self.symptom.name, self.name)
