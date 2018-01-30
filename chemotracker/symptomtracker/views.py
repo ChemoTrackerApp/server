@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseBadRequest, HttpResponseNotFound, JsonResponse
 from django.views.decorators.http import require_http_methods
+from django.views.decorators.csrf import csrf_exempt
 from rest_framework.renderers import JSONRenderer
 from rest_framework.parsers import JSONParser
 from symptomtracker.models import Symptom, SymptomGrade, PatientSymptomGrade
@@ -8,6 +9,7 @@ from symptomtracker.serializers import PatientSymptomGradeSerializer
 import json
 
 @require_http_methods(["GET", "POST"])
+@csrf_exempt
 def symptoms(request):
     if request.method == 'GET':
         symptoms = Symptom.objects.all()
