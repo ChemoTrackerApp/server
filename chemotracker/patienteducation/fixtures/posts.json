@@ -1,0 +1,38 @@
+[  
+   {  
+      "model":"patienteducation.post",
+      "pk":1,
+      "fields":{  
+         "title": "About Chemotherapy",
+         "url": "https://www.cancercareontario.ca/en/cancer-treatments/chemotherapy/about",
+         "content": "When treating cancer, the goal may be to cure the cancer, lower the chance that cancer will return or slow the growth of tumours that cause pain or other problems. Chemotherapy may both extend life and/or increase your quality of life.\nWhat is it?\nChemotherapy (also known as chemo) is the name used for some types of anticancer medications. These medications are used to cure or control fast-growing cancer, to prepare a patient for other treatments like surgery or to ease cancer symptoms. \nAll chemotherapy medications are antineoplastic, meaning they slow cancer growth, or stop the growth of tumours (neoplasms). Some chemotherapy medications are cytotoxic, meaning they kill cells. Chemotherapy affects all fast-growing cells in the body, not just cancer cells. This is why there are many side effects associated with chemotherapy."
+      }
+   },
+   {  
+      "model":"patienteducation.post",
+      "pk":2,
+      "fields":{  
+         "title": "About Radiation",
+         "url": "https://www.cancercareontario.ca/en/cancer-treatments/radiation/about",
+         "content": "Radiation involves using high-energy radiation beams in a very focused way to treat or cure cancer, or to provide relief from cancer symptoms. Approximately half of all cancer patients require radiation treatment at some point during the course of their illness.\nWhat is it?\nRadiation treatment is the use of a certain type of energy (radiation) from X-rays, gamma rays and electrons to destroy cancer cells. In high doses, radiation destroys cells in the area being treated. It does this by damaging the DNA (genetic information) in cancer cell genes, making it impossible for them to grow and divide. During radiation treatment, both cancer cells – which are growing in an uncontrolled way – and healthy cells are affected, but most healthy cells can repair themselves."
+      }
+   },
+   {  
+      "model":"patienteducation.post",
+      "pk":3,
+      "fields":{  
+         "title": "Breast Screening for Survivors of Breast Cancer",
+         "url": "https://www.cancercareontario.ca/en/guidelines-advice/types-of-cancer/43306",
+         "content": "Guideline Objective\nTo determine whether breast cancer survivors can be included in an organized screening program, and to determine the appropriateness and feasibility of conducting surveillance imaging on specific populations of women with PHBC, including individuals who have undergone implant-based reconstructions, reconstructions using autologous tissue flaps, such as the TRAM flaps, or nipple-sparing or skin-sparing mastectomies, or women who have undergone unilateral or bilateral mastectomy without reconstruction"
+      }
+   },
+   {  
+      "model":"patienteducation.post",
+      "pk":4,
+      "fields":{  
+         "title": "Pancreatic Cancer Signs & Symptoms",
+         "url": "https://www.mskcc.org/cancer-care/types/pancreatic/symptoms",
+         "content": "There are no early warning signs for pancreatic cancer. Symptoms can be so vague that you may not notice them.\nSome people notice the following symptoms as pancreatic cancer evolves:"
+      }
+   }
+]

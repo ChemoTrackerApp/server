@@ -4,5 +4,8 @@
 # Logs
 
 # Virtual environment files
-chemotracker/chemotracker/*
+chemotracker/chemotrackerenv/*
+
+#pyc files
+**/*.pyc
 
