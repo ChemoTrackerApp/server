@@ -36,8 +36,33 @@ def grades(request):
     return HttpResponse(json.dumps({symptom.name: response}), content_type='application/json')
 
 def add_symptom(request):
-    serializer = PatientSymptomGradeSerializer(data=request.data)
+    # patient_id = request.body.get('patient')
+    # symptom_id = request.body.get('symptom')
+    # symptom_grade_id = request.body.get('symptom_grade')
+
+    # if symptom_id is None or patient_id is None or symptom_grade_id is None:
+    #     errors = ''
+    #     if symptom_id is None:
+    #         errors+= 'symptom_id\n'
+    #     if patient_id is None:
+    #         errors+= 'patient_id\n'
+    #     if symptom_grade_id is None:
+    #         errors+= 'symptom_grade_id\n'
+    #     return HttpResponseBadRequest('Missing URL Parameters\n' + errors)
+
+    # created = PatientSymptomGrade.create(patient_id, symptom_id, symptom_grade_id)
+
+    # if (created is None):
+    #     return HttpResponseBadRequest('Unable to create symptom')
+    # else:
+    #     return HttpResponse(json.dumps({"symptom": created}), status=201, content_type='application/json')
+
+
+    # symptom = Symptom.objects.get(id=symptom_id)
+    # patient = Patient.objects.get(id=patient_id)
+    data = JSONParser().parse(request)
+    serializer = PatientSymptomGradeSerializer(data=data)
     if serializer.is_valid():
         serializer.save()
-        return Response(serializer.data, status=status.HTTP_201_CREATED)
-    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        return JsonResponse(serializer.data, status=201)
+    return JsonResponse(serializer.errors, status=400)
