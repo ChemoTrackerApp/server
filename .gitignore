@@ -6,3 +6,6 @@
 # Virtual environment files
 chemotracker/chemotracker/*
 
+#pyc files
+**/*.pyc
+

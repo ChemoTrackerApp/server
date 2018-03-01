@@ -15,6 +15,10 @@
 ## Install dependencies
     pip install -r requirements.txt
 
+## To configure watson
+    python manage.py installwatson
+    python manage.py buildwatson
+
 ## To run the server:
     python manage.py runserver
 
@@ -24,3 +28,6 @@
 
 ## To run tests:
     python manage.py test   
+
+## To end the virtual environment
+    deactivate
