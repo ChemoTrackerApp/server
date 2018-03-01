@@ -20,11 +20,11 @@ def symptoms(request):
 
 @require_http_methods(["GET"])
 def grades(request):
-    symptom_name = request.GET.get('symptom')
-    if symptom_name is None:
-        return HttpResponseBadRequest('Need to specify symptom as URL Parameter')
+    symptom_id = request.GET.get('symptom')
+    if symptom_id is None:
+        return HttpResponseBadRequest('Need to specify symptom id as URL Parameter')
 
-    symptom = Symptom.objects.get(name=symptom_name)
+    symptom = Symptom.objects.get(id=symptom_id)
 
     if symptom is None:
         return HttpResponseNotFound('Symptom not found!')
