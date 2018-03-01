@@ -7,10 +7,10 @@
     sudo pip install virtualenv
 
 ## Create a virtual environment
-    virtualenv chemotrackerenv
+    virtualenv chemotracker
 
 ## Work on the virtual environment
-    source chemotrackerenv/bin/activate
+    source chemotracker/bin/activate
 
 ## Install dependencies
     pip install -r requirements.txt
