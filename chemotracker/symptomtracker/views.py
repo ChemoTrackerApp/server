@@ -63,7 +63,7 @@ def get_patient_symptoms(request):
     except Exception:
         return HttpResponseBadRequest("Invalid date. Parameters must be invalid.")
 
-    symptoms = PatientSymptomGrade(patient=request.user, recorded_at__date=query_date)
+    response = PatientSymptomGrade(patient=request.user, recorded_at__date=query_date)
 
     return HttpResponse(json.dumps({"Symptoms": response}), content_type='application/json')
 
