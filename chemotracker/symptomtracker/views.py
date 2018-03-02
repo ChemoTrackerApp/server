@@ -57,9 +57,11 @@ def get_patient_symptoms(request):
         return HttpResponseBadRequest("Missing year or month or day field")
 
     try:
-        date = datetime.date(year, month, day)
+        date = datetime.date(int(year), int(month), int(day))
     except ValueError:
         return HttpResponseBadRequest("Invalid date")
+    except Exception:
+        return HttpResponseBadRequest("Invalid date. Parameters must be invalid.")
 
     symptoms = PatientSymptomGrade(patient=request.user.id, recorded_at__gte=datetime.datetime.combine(date, datetime.time.min), recorded_at__lte=datetime.datetime.combine(date, datetime.time.max))
 
