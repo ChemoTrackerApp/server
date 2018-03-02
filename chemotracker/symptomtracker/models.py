@@ -69,4 +69,5 @@ class PatientSymptomGrade(models.Model):
             "id": self.id,
             "name": self.grade.name,
             "description": self.symptom_grade.description,
+            "recorded_at": self.recorded_at
         }
