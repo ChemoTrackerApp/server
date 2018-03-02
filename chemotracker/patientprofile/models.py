@@ -7,15 +7,15 @@ from django.dispatch import receiver
 
 class PatientProfile(models.Model):
     user = models.OneToOneField(User, to_field='id', primary_key=True)
-    image = models.URLField()
-    gender = models.CharField(max_length=30)
-    date_of_birth = models.DateField()
-    phone_number = models.CharField(max_length=30)
-    allergy = models.ForeignKey('Allergy', on_delete=models.CASCADE)
-    medical_conditions = ArrayField(models.CharField(max_length=100))
-    medication_list = ArrayField(models.CharField(max_length=100))
-    cancer_diagnosis = models.CharField(max_length=50)
-    chemotherapy = models.CharField(max_length=3)
+    image = models.URLField(null=True)
+    gender = models.CharField(max_length=30, null=True)
+    date_of_birth = models.DateField(null=True)
+    phone_number = models.CharField(max_length=30, null=True)
+    allergy = models.ForeignKey('Allergy', on_delete=models.CASCADE, null=True)
+    medical_conditions = ArrayField(models.CharField(max_length=100), null=True)
+    medication_list = ArrayField(models.CharField(max_length=100), null=True)
+    cancer_diagnosis = models.CharField(max_length=50, null=True)
+    chemotherapy = models.CharField(max_length=3, null=True)
 
     class Meta:
         verbose_name = _("patient profile")
