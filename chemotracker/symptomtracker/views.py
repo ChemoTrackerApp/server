@@ -47,7 +47,7 @@ def add_symptom(request):
 
 @require_http_methods(["GET"])
 def get_patient_symptoms(request):
-    if user is None or not user.is_authenticated:
+    if request.user is None or not request.user.is_authenticated:
         return HttpResponseForbidden("Missing or invalid Authorization token")
     year = request.GET.get('year')
     month = request.GET.get('month')
