@@ -66,8 +66,8 @@ class PatientSymptomGrade(models.Model):
 
     def as_dict(self):
         return {
-            "id": self.id,
-            "name": self.grade.name,
-            "description": self.symptom_grade.description,
+            "patient": self.patient.id,
+            "symptom": self.symptom.id,
+            "grade": self.symptom_grade.id,
             "recorded_at": self.recorded_at
         }
