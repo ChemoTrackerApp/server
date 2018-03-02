@@ -63,12 +63,10 @@ class PatientSymptomGrade(models.Model):
 
     def __str__(self):
         return "%s: %s" % (self.symptom.name, self.name)
-        
+
     def as_dict(self):
         return {
             "id": self.id,
             "name": self.grade.name,
             "description": self.symptom_grade.description,
-            # "patientFriendlyDescription": self.grading_patient_friendly,
-            # "patientFriendlyIntervention": self.intervention_patient_friendly
         }

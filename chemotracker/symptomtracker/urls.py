@@ -4,5 +4,6 @@ from . import views
 
 urlpatterns = [
     url(r"^symptoms/$", views.symptoms, name="get_symptoms"),
-    url(r"grades", views.grades, name="get_grades")
+    url(r"grades", views.grades, name="get_grades"),
+    url(r"patientsymptoms", views.get_patient_symptoms, name="get_patient_symptoms")
 ]
