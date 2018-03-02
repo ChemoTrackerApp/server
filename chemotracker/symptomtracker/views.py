@@ -22,8 +22,6 @@ def symptoms(request):
 
 @require_http_methods(["GET"])
 def grades(request):
-    print (request)
-    print(request.user)
     symptom_id = request.GET.get('symptom')
     if symptom_id is None:
         return HttpResponseBadRequest('Need to specify symptom id as URL Parameter')
@@ -49,6 +47,22 @@ def add_symptom(request):
 
 @require_http_methods(["GET"])
 def get_patient_symptoms(request):
+    if request.user is None:
+        return HttpResponseForbidden("Missing Authorization token")
     year = request.GET.get('year')
     month = request.GET.get('month')
     day = request.GET.get('day')
+
+    if year is None or month is None or day is None:
+        return HttpResponseBadRequest("Missing year or month or day field")
+
+    try:
+        date = datetime.date(year, month, day)
+    except ValueError:
+        return HttpResponseBadRequest("Invalid date")
+
+    symptoms = PatientSymptomGrade(patient=request.user.id, recorded_at__gte=datetime.datetime.combine(date, datetime.time.min), recorded_at__lte=datetime.datetime.combine(date, datetime.time.max))
+
+    return HttpResponse(json.dumps({"Symptoms": response}), content_type='application/json')
+
+
