@@ -69,5 +69,5 @@ class PatientSymptomGrade(models.Model):
             "patient": self.patient.id,
             "symptom": self.symptom.id,
             "grade": self.symptom_grade.id,
-            "recorded_at": self.recorded_at.strftime('%Y-%m-%dT%H:%M:%S')
+            "recorded_at": self.recorded_at.strftime('%Y-%m-%d %H:%M:%S')
         }
