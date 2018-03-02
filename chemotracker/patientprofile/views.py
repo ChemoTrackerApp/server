@@ -14,14 +14,9 @@ def profile(request):
         return update_profile(request)
 
 def get_profile(request):
-    user_id = request.GET.get('id')
-    if user_id is None:
-        return HttpResponseBadRequest('Need to specify user_id as URL Parameter')
-
-    user = User.objects.get(id=user_id)
-
-    if user is None:
-        return HttpResponseNotFound('User not found!')
+    user = request.user
+    if user is None or not user.is_authenticated:
+        return HttpResponseForbidden("Missing or invalid Authorization token")
 
     return HttpResponse(json.dumps(user.patientprofile.as_dict()), content_type='application/json')
 

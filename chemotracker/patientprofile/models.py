@@ -1,11 +1,21 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.contrib.postgres.fields import ArrayField
 from django.utils.translation import ugettext_lazy as _
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 
 class PatientProfile(models.Model):
     user = models.OneToOneField(User, to_field='id', primary_key=True)
+    image = models.URLField()
+    gender = models.CharField(max_length=30)
+    date_of_birth = models.DateField()
+    phone_number = models.CharField(max_length=30)
+    allergy = models.ForeignKey('Allergy', on_delete=models.CASCADE)
+    medical_conditions = ArrayField(models.CharField(max_length=100))
+    medication_list = ArrayField(models.CharField(max_length=100))
+    cancer_diagnosis = models.CharField(max_length=50)
+    chemotherapy = models.CharField(max_length=3)
 
     class Meta:
         verbose_name = _("patient profile")
@@ -19,7 +29,16 @@ class PatientProfile(models.Model):
             "id": self.user.id,
             "firstName": self.user.first_name,
             "lastName": self.user.last_name,
-            "email": self.user.email
+            "image": self.image,
+            "gender": self.gender,
+            "dateOfBirth": self.date_of_birth,
+            "phoneNumber": self.phone_number,
+            "emailAddress": self.user.email,
+            "allergy": self.allergy,
+            "medicalConditions": self.medical_conditions,
+            "medication_list": self.medication_list,
+            "cancerDiagnosis": self.cancer_diagnosis,
+            "chemotherapy": self.chemotherapy
         }
 
 @receiver(post_save, sender=User)
@@ -30,3 +49,21 @@ def create_patient_profile(sender, instance, created, **kwargs):
 @receiver(post_save, sender=User)
 def save_patient_profile(sender, instance, **kwargs):
     instance.patientprofile.save()
+
+
+class Allergy (models.Model):
+    allergen = models.CharField(max_length=30)
+    reaction = ArrayField(models.CharField(max_length=30))
+
+    class Meta:
+        verbose_name = _("allergy")
+        verbose_name_plural = _("allergies")
+
+    def __str__(self):
+        return "%s: %s" % (self.allergen, self.reaction)
+
+    def as_dict(self):
+        return {
+            "allergen": self.allergen,
+            "reactionn": self.reaction,
+        }
