@@ -24,7 +24,7 @@ class PatientProfile(models.Model):
         return "%s %s" % (self.user.first_name, self.user.last_name)
 
     def as_dict(self):
-        allergies = Allergy.objects.filter(patient_id=self.id)
+        allergies = Allergy.objects.filter(patient_user=self.user)
         allergies_dict = [ obj.as_dict() for obj in allergies ]
         return {
             "id": self.user.id,
