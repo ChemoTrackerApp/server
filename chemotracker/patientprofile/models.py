@@ -26,13 +26,17 @@ class PatientProfile(models.Model):
     def as_dict(self):
         allergies = Allergy.objects.filter(patient_id=self)
         allergies_dict = [ obj.as_dict() for obj in allergies ]
+        if self.date_of_birth:
+            date_val = self.date_of_birth.strftime('%Y-%m-%d')
+        else :
+            date_val = self.date_of_birth
         return {
             "id": self.user.id,
             "firstName": self.user.first_name,
             "lastName": self.user.last_name,
             "image": self.image,
             "gender": self.gender,
-            "dateOfBirth": self.date_of_birth.strftime('%Y-%m-%d'),
+            "dateOfBirth": date_val,
             "phoneNumber": self.phone_number,
             "emailAddress": self.user.email,
             "allergy": allergies_dict,
