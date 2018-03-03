@@ -11,7 +11,6 @@ class PatientProfile(models.Model):
     gender = models.CharField(max_length=30, null=True)
     date_of_birth = models.DateField(null=True)
     phone_number = models.CharField(max_length=30, null=True)
-    allergy = models.ForeignKey('Allergy', on_delete=models.CASCADE, null=True)
     medical_conditions = ArrayField(models.CharField(max_length=100), null=True)
     medication_list = ArrayField(models.CharField(max_length=100), null=True)
     cancer_diagnosis = models.CharField(max_length=50, null=True)
@@ -25,6 +24,8 @@ class PatientProfile(models.Model):
         return "%s %s" % (self.user.first_name, self.user.last_name)
 
     def as_dict(self):
+        allergies = Allergy.objects.filter(patient_id=self.id)
+        allergies_dict = [ obj.as_dict() for obj in allergies ]
         return {
             "id": self.user.id,
             "firstName": self.user.first_name,
@@ -34,7 +35,7 @@ class PatientProfile(models.Model):
             "dateOfBirth": self.date_of_birth,
             "phoneNumber": self.phone_number,
             "emailAddress": self.user.email,
-            "allergy": self.allergy,
+            "allergy": allergies_dict,
             "medicalConditions": self.medical_conditions,
             "medicationList": self.medication_list,
             "cancerDiagnosis": self.cancer_diagnosis,
@@ -52,6 +53,7 @@ def save_patient_profile(sender, instance, **kwargs):
 
 
 class Allergy (models.Model):
+    patient = models.ForeignKey('PatientProfile', on_delete=models.CASCADE)
     allergen = models.CharField(max_length=30)
     reaction = ArrayField(models.CharField(max_length=30))
 

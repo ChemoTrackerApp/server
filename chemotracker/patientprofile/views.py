@@ -4,7 +4,7 @@ from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseBadRequest, HttpResponseNotFound, HttpResponseForbidden
 from django.views.decorators.http import require_http_methods
 from django.views.decorators.csrf import csrf_exempt
-from patientprofile.models import PatientProfile
+from patientprofile.models import PatientProfile, Allergy
 import json
 import pdb
 
@@ -32,25 +32,47 @@ def update_profile(request):
     if user is None or not user.is_authenticated:
         return HttpResponseForbidden("Missing or invalid Authorization token")
 
-    print(request.POST)
+    
     request_body = request.body
-    print (request_body)
     
     # Parse the json
     body = json.loads(request_body)
-    print (body)
+
+    email = body.get('emailAddress')
     first_name = body.get('firstName')
     last_name = body.get('lastName')
+    image = body.get('image')
     medical_conditions = body.get('medicalConditions')
     medication_list = body.get('medicationList')
-    image = body.get('image')
     allergy = body.get('allergy')
     cancer_diagnosis = body.get('cancerDiagnosis')
-    email = body.get('emailAddress')
     gender = body.get('gender')
     date_of_birth = body.get('dateOfBirth')
     phone_number = body.get('phoneNumber')
     chemotherapy = body.get('chemotherapy')
+    try:
+        user.email = email
+        user.first_name = first_name
+        user.last_name = last_name
+        user.patientprofile.image = image
+        user.patientprofile.medical_conditions = medical_conditions
+        user.patientprofile.medication_list = medication_list
+        user.patientprofile.cancer_diagnosis = cancer_diagnosis
+        user.patientprofile.gender = gender
+        user.patientprofile.date_of_birth = date_of_birth
+        user.patientprofile.phone_number = phone_number
+        for a in allergy:
+            temp = Allergy()
+            temp.patient = user.patientprofile
+            temp.allergen = a.get('allergen')
+            temp.reaction = a.get('reaction')
+            temp.save()
+
+        user.patientprofile.chemotherapy = chemotherapy
+        user.save()
+        user.patientprofile.save()
+    except Exception:
+        return HttpResponseBadRequest("Invalid data.")
     pdb.set_trace()
 
 
