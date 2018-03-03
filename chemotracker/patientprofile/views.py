@@ -6,6 +6,8 @@ from django.views.decorators.http import require_http_methods
 from django.views.decorators.csrf import csrf_exempt
 from patientprofile.models import PatientProfile, Allergy
 import json
+import time
+import datetime
 
 @require_http_methods(["GET", "POST"])
 @csrf_exempt
@@ -44,7 +46,7 @@ def update_profile(request):
     allergy = body.get('allergy')
     cancer_diagnosis = body.get('cancerDiagnosis')
     gender = body.get('gender')
-    date_of_birth = body.get('dateOfBirth')
+    date_of_birth = datetime.datetime.strptime(body.get('dateOfBirth'), '%Y-%m-%d').date() 
     phone_number = body.get('phoneNumber')
     chemotherapy = body.get('chemotherapy')
     try:
@@ -58,6 +60,10 @@ def update_profile(request):
         user.patientprofile.gender = gender
         user.patientprofile.date_of_birth = date_of_birth
         user.patientprofile.phone_number = phone_number
+
+        # Delete existing allergies
+        Allergy.objects.filter(patient_id=user.patientprofile).delete()
+
         for a in allergy:
             temp = Allergy()
             temp.patient = user.patientprofile

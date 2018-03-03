@@ -67,5 +67,5 @@ class Allergy (models.Model):
     def as_dict(self):
         return {
             "allergen": self.allergen,
-            "reactionn": self.reaction,
+            "reaction": self.reaction,
         }
