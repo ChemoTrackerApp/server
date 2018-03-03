@@ -23,9 +23,7 @@ def get_profile(request):
     print (request.user.id)
     profile = PatientProfile.objects.filter(user_id=request.user.id)
 
-    response = [ obj.as_dict() for obj in profile ]
-
-    return HttpResponse(json.dumps({"profile": response}), content_type='application/json')
+    return HttpResponse(json.dumps(profile[0].as_dict()), content_type='application/json')
 
 def update_profile(request):
     user = request.user
@@ -73,7 +71,9 @@ def update_profile(request):
         user.patientprofile.save()
     except Exception:
         return HttpResponseBadRequest("Invalid data.")
-    pdb.set_trace()
+    
+    return HttpResponse(json.dumps(user.patientprofile.as_dict()), content_type='application/json')    
+
 
 
 @require_http_methods(["GET"])
