@@ -39,6 +39,18 @@ def update_profile(request):
     # Parse the json
     body = json.loads(request_body)
     print (body)
+    first_name = body.get('firstName')
+    last_name = body.get('lastName')
+    medical_conditions = body.get('medicalConditions')
+    medication_list = body.get('medicationList')
+    image = body.get('image')
+    allergy = body.get('allergy')
+    cancer_diagnosis = body.get('cancerDiagnosis')
+    email = body.get('emailAddress')
+    gender = body.get('gender')
+    date_of_birth = body.get('dateOfBirth')
+    phone_number = body.get('phoneNumber')
+    chemotherapy = body.get('chemotherapy')
     pdb.set_trace()
 
 

@@ -36,7 +36,7 @@ class PatientProfile(models.Model):
             "emailAddress": self.user.email,
             "allergy": self.allergy,
             "medicalConditions": self.medical_conditions,
-            "medication_list": self.medication_list,
+            "medicationList": self.medication_list,
             "cancerDiagnosis": self.cancer_diagnosis,
             "chemotherapy": self.chemotherapy
         }
