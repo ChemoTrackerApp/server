@@ -14,12 +14,12 @@ def profile(request):
         return update_profile(request)
 
 def get_profile(request):
-    user = request.user
-    if user is None or not user.is_authenticated:
+    print ("Hello")
+    if request.user is None or not request.user.is_authenticated:
         return HttpResponseForbidden("Missing or invalid Authorization token")
 
-    print (user.id)
-    profile = PatientProfile.objects.filter(id=user.id)
+    print (request.user.id)
+    profile = PatientProfile.objects.filter(id=request.user)
 
     return HttpResponse(json.dumps(profile.as_dict()), content_type='application/json')
 
