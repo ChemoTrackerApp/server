@@ -6,7 +6,6 @@ from django.views.decorators.http import require_http_methods
 from django.views.decorators.csrf import csrf_exempt
 from patientprofile.models import PatientProfile, Allergy
 import json
-import pdb
 
 @require_http_methods(["GET", "POST"])
 @csrf_exempt

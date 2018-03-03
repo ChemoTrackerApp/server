@@ -32,7 +32,7 @@ class PatientProfile(models.Model):
             "lastName": self.user.last_name,
             "image": self.image,
             "gender": self.gender,
-            "dateOfBirth": self.date_of_birth,
+            "dateOfBirth": self.date_of_birth.strftime('%Y-%m-%d'),
             "phoneNumber": self.phone_number,
             "emailAddress": self.user.email,
             "allergy": allergies_dict,
