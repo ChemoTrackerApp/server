@@ -6,6 +6,7 @@ from django.views.decorators.http import require_http_methods
 from django.views.decorators.csrf import csrf_exempt
 from patientprofile.models import PatientProfile
 import json
+import pdb
 
 @require_http_methods(["GET", "POST"])
 @csrf_exempt
@@ -38,6 +39,7 @@ def update_profile(request):
     # Parse the json
     body = json.loads(request_body)
     print (body)
+    pdb.set_trace()
 
 
 @require_http_methods(["GET"])
