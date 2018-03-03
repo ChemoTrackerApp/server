@@ -7,6 +7,7 @@ from patientprofile.models import PatientProfile
 import json
 
 @require_http_methods(["GET", "POST"])
+@csrf_exempt
 def profile(request):
     if request.method == 'GET':
         return get_profile(request)
