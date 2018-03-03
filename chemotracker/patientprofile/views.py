@@ -31,13 +31,14 @@ def update_profile(request):
     if user is None or not user.is_authenticated:
         return HttpResponseForbidden("Missing or invalid Authorization token")
 
+    print(request.POST)
     request_body = request.body
+    print (request_body)
     
     # Parse the json
     body = json.loads(request_body)
+    print (body)
 
-    first_name = body['firstName']
-    last_name = body['lastName']
 
 @require_http_methods(["GET"])
 def users(request):
