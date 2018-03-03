@@ -20,7 +20,9 @@ def get_profile(request):
     print (request.user.id)
     profile = PatientProfile.objects.filter(user_id=request.user.id)
 
-    return HttpResponse(json.dumps(profile.as_dict()), content_type='application/json')
+    response = [ obj.as_dict() for obj in profile ]
+
+    return HttpResponse(json.dumps({"profile": response}), content_type='application/json')
 
 def update_profile(request):
     user = request.user
