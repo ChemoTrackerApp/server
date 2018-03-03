@@ -19,7 +19,7 @@ def get_profile(request):
         return HttpResponseForbidden("Missing or invalid Authorization token")
 
     print (request.user.id)
-    profile = PatientProfile.objects.filter(id=request.user)
+    profile = PatientProfile.objects.filter(id=request.user.id)
 
     return HttpResponse(json.dumps(profile.as_dict()), content_type='application/json')
 
