@@ -11,6 +11,8 @@
 
 ## Work on the virtual environment
     source chemotracker/bin/activate
+    OR
+    workon chemotracker
 
 ## Install dependencies
     pip install -r requirements.txt
@@ -31,3 +33,14 @@
 
 ## To end the virtual environment
     deactivate
+
+## To run the server as a detached process
+    screen
+    source ~/.bash_profile
+    Start the server as normal
+    Press Ctrl + A or Command + A (on mac)
+    Press D
+
+## To navigate back to detached process
+    screen -r
+
