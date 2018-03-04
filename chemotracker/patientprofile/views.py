@@ -83,11 +83,16 @@ def update_profile(request):
 
 @require_http_methods(["GET"])
 def users(request):
+    user = request.user
+    if user is None or not user.is_authenticated:
+        return HttpResponseForbidden("Missing or invalid Authorization token")
+
     query = request.GET.get('query')
     
     if query is None:
         users = PatientProfile.objects.all()[:10]
     else:
+        # Need to limit number of users returned at some point
         users = PatientProfile.objects.filter(Q(user__first_name__icontains=query) | Q(user__last_name__icontains=query) | Q(user__email__icontains=query))
 
     response = [ obj.as_dict() for obj in users ]

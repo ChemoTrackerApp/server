@@ -52,18 +52,26 @@ def get_patient_symptoms(request):
     year = request.GET.get('year')
     month = request.GET.get('month')
     day = request.GET.get('day')
+    isMonth = False
+    if year is None or month is None:
+        return HttpResponseBadRequest("Missing year or month field")
 
-    if year is None or month is None or day is None:
-        return HttpResponseBadRequest("Missing year or month or day field")
-
+    if day is None:
+        isMonth = True
     try:
-        query_date = datetime.date(int(year), int(month), int(day))
+        if isMonth:
+            query_date = datetime.date(int(year), int(month), int(1))
+        else:    
+            query_date = datetime.date(int(year), int(month), int(day))
     except ValueError:
         return HttpResponseBadRequest("Invalid date")
     except Exception:
         return HttpResponseBadRequest("Invalid date. Parameters must be invalid.")
 
-    symptoms = PatientSymptomGrade.objects.filter(patient=request.user, recorded_at__date=query_date)
+    if isMonth:
+        symptoms = PatientSymptomGrade.objects.filter(patient=request.user, recorded_at__year=query_date.year, recorded_at__month=query_date.month)
+    else:
+        symptoms = PatientSymptomGrade.objects.filter(patient=request.user, recorded_at__date=query_date)
 
     response = [ obj.as_dict() for obj in symptoms ]    
 
