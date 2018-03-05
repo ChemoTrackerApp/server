@@ -1,0 +1,83 @@
+[  
+   {  
+      "model":"symptomtracker.tip",
+      "pk":1,
+      "fields":{  
+         "symptom":1,
+         "icon":"water",
+         "description": ["Eat small, frequent and bland meals", "Drink small amounts of fluid regularly between meals"]
+      }
+   },
+   {  
+      "model":"symptomtracker.tip",
+      "pk":2,
+      "fields":{  
+         "symptom":1,
+         "icon":"food-variant",
+         "description":["Eat at times of day when feelings of nausea are less", "Avoid spicy and fatty foods"]
+      }
+   },
+   {  
+      "model":"symptomtracker.tip",
+      "pk":3,
+      "fields":{  
+         "symptom":1,
+         "icon":"pot",
+         "description":["Try eating cold foods if smells from hot food are bothersome", "Avoid cooking and strong smells"]
+      }
+   },
+   {  
+      "model":"symptomtracker.tip",
+      "pk":4,
+      "fields":{  
+         "symptom":2,
+         "icon":"water",
+         "description":["Rehydrate: sip water and other fluids and suck on ice chips, popsicles or frozen fruits."]
+      }
+   },
+      {  
+      "model":"symptomtracker.tip",
+      "pk":5,
+      "fields":{  
+         "symptom":2,
+         "icon":"food-variant",
+         "description": ["Eat small frequent meals and limit spicy, fried foods and foods with strong smells.", "Have you had regular bowel movements lately? Severe constipation may cause nausea and vomiting."]
+      }
+   },
+   {  
+      "model":"symptomtracker.tip",
+      "pk":6,
+      "fields":{  
+         "symptom":2,
+         "icon":"music",
+         "description":["Focus attention on  TV, music, reading, fresh air or walking"]
+      }
+   },
+   {  
+      "model":"symptomtracker.tip",
+      "pk":7,
+      "fields":{  
+         "symptom":4,
+         "icon":"pill",
+         "description":["Stop using laxatives and stool softeners immediately (e.g. senna/Senokot, docusate, Lax-A-Day)", "Ask your pharmacist if an anti-diarrheal medication is safe for you."]
+      }
+   },
+   {  
+      "model":"symptomtracker.tip",
+      "pk":8,
+      "fields":{  
+         "symptom":4,
+         "icon":"cup-water",
+         "description":["Rehydrate using fruit juices, broths and/or oral rehydration solution"]
+      }
+   },
+         {  
+      "model":"symptomtracker.tip",
+      "pk":9,
+      "fields":{  
+         "symptom":4,
+         "icon":"food-variant",
+         "description": ["Avoid high fibre foods, dairy, sugary sports drinks (e.g. Gatorade), fatty or spicy foods", "Try the BRAT diet to bulk up the stool and replace electrolytes (bananas, white rice, applesauce and white toast)"]
+      }
+   }
+]

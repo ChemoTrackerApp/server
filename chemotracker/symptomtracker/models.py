@@ -1,5 +1,6 @@
 from django.contrib.auth.models import User
 from django.db import models
+from django.contrib.postgres.fields import ArrayField
 from django.utils.translation import ugettext_lazy as _
 
 class Symptom(models.Model):
@@ -70,4 +71,44 @@ class PatientSymptomGrade(models.Model):
             "symptom": self.symptom.id,
             "grade": self.symptom_grade.id,
             "recorded_at": self.recorded_at.strftime('%Y-%m-%d %H:%M:%S')
+        }
+
+
+class Intervention (models.Model):
+    symptom = models.ForeignKey('Symptom', on_delete=models.CASCADE)
+    grade = models.ForeignKey('Grade', on_delete=models.CASCADE)
+    description = ArrayField(models.TextField(), null=True)
+
+    class Meta:
+        verbose_name = _("intervention")
+        verbose_name_plural = _("interventions")
+
+    def __str__(self):
+        return "Symptom %s and Grade %s: %s" % (self.symptom.name, self.grade.name, self.description)
+
+    def as_dict(self):
+        return {
+            "symptom": self.symptom.id,
+            "grade": self.grade.id,
+            "description": self.description
+        }
+
+
+class Tip (models.Model):
+    symptom = models.ForeignKey('Symptom', on_delete=models.CASCADE)
+    description = ArrayField(models.TextField(), null=True)
+    icon = models.CharField(max_length=30)
+
+    class Meta:
+        verbose_name = _("tip")
+        verbose_name_plural = _("tips")
+
+    def __str__(self):
+        return "Symptom %s Icon %s: %s" % (self.symptom.name, self.icon, self.description)
+
+    def as_dict(self):
+        return {
+            "symptom": self.symptom.id,
+            "description": self.description,
+            "icon": self.icon
         }

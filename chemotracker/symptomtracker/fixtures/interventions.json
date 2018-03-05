@@ -1,0 +1,137 @@
+[  
+   {  
+      "model":"symptomtracker.intervention",
+      "pk":1,
+      "fields":{  
+         "symptom":1,
+         "grade":1,
+         "description": ["Glad to hear you’re doing well! Check back if anything changes."]
+      }
+   },
+   {  
+      "model":"symptomtracker.intervention",
+      "pk":2,
+      "fields":{  
+         "symptom":1,
+         "grade":2,
+         "description":["1. Take your antinausea medications as directed by your oncology team.", "2. Try some of these tips."]
+      }
+   },
+   {  
+      "model":"symptomtracker.intervention",
+      "pk":3,
+      "fields":{  
+         "symptom":1,
+         "grade":3,
+         "description":["1. Take your antinausea medications as directed by your oncology team.", "2. Contact your oncology team for further management."]
+      }
+   },
+   {  
+      "model":"symptomtracker.intervention",
+      "pk":4,
+      "fields":{  
+         "symptom":1,
+         "grade":4,
+         "description":["Contact your oncology team or family physician. If they cannot be reached, please visit your closest emergency department for evaluation."]
+      }
+   },
+      {  
+      "model":"symptomtracker.intervention",
+      "pk":5,
+      "fields":{  
+         "symptom":2,
+         "grade":1,
+         "description": ["Glad you’re doing ok!"]
+      }
+   },
+   {  
+      "model":"symptomtracker.intervention",
+      "pk":6,
+      "fields":{  
+         "symptom":2,
+         "grade":2,
+         "description":["Have you taken your ‘breakthrough’ nausea medication yet?", "Try some of these tips to help make you feel better."]
+      }
+   },
+   {  
+      "model":"symptomtracker.intervention",
+      "pk":7,
+      "fields":{  
+         "symptom":2,
+         "grade":3,
+         "description":["Make sure you’re taking your ‘as needed’ nausea medication regularly.", "If it’s not working, notify your oncology team. They may be able to help.", "You can always try these tips to help make you feel better."]
+      }
+   },
+   {  
+      "model":"symptomtracker.intervention",
+      "pk":8,
+      "fields":{  
+         "symptom":2,
+         "grade":4,
+         "description":["Ok, it’s time for you to seek medical attention!", "Please visit the nearest hospital for emergency care, especially if your symptoms are getting worse."]
+      }
+   },
+         {  
+      "model":"symptomtracker.intervention",
+      "pk":9,
+      "fields":{  
+         "symptom":3,
+         "grade":2,
+         "description": ["Believe it or not, activity actually helps improve symptoms of tiredness. Try and stay active through the day."]
+      }
+   },
+   {  
+      "model":"symptomtracker.intervention",
+      "pk":10,
+      "fields":{  
+         "symptom":3,
+         "grade":3,
+         "description":["Try and stay active through the day.", "You may want to contact your oncology team to see if a decrease in your therapy is appropriate."]
+      }
+   },
+   {  
+      "model":"symptomtracker.intervention",
+      "pk":11,
+      "fields":{  
+         "symptom":3,
+         "grade":4,
+         "description":["Sorry your life has been impacted by your fatigue.", "You should contact your oncology team for advice.", "They will be able to investigate what is making you feel this way."]
+      }
+   },
+   {  
+      "model":"symptomtracker.intervention",
+      "pk":12,
+      "fields":{  
+         "symptom":4,
+         "grade":1,
+         "description":["Glad you’re doing ok!"]
+      }
+   },
+   {  
+      "model":"symptomtracker.intervention",
+      "pk":13,
+      "fields":{  
+         "symptom":4,
+         "grade":2,
+         "description":["There are over the counter medications that can help - talk to your pharmacist!", "You can also try some of these tips."]
+      }
+   },
+   {  
+      "model":"symptomtracker.intervention",
+      "pk":14,
+      "fields":{  
+         "symptom":4,
+         "grade":3,
+         "description":["Have you taken any medications to help stop your loose stools?", "If it’s not working, and you’ve had symptoms for over 24hrs, please notify your oncology team. They may be able to help.", "You can also always try these tips to help make you feel better."]
+      }
+   },
+   {  
+      "model":"symptomtracker.intervention",
+      "pk":15,
+      "fields":{  
+         "symptom":4,
+         "grade":4,
+         "description":["Ok, it’s time for you to seek medical attention!", "Please visit the nearest hospital for emergency care, especially if your symptoms are getting worse."]
+      }
+   }
+]

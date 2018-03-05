@@ -76,3 +76,36 @@ def get_patient_symptoms(request):
     response = [ obj.as_dict() for obj in symptoms ]    
 
     return HttpResponse(json.dumps({"Symptoms": response}), content_type='application/json')
+
+
+@require_http_methods(["GET"])
+def get_interventions(request):
+    if request.user is None or not request.user.is_authenticated:
+        return HttpResponseForbidden("Missing or invalid Authorization token")
+
+    symptom_id = request.GET.get('symptom')
+    if symptom_id is None:
+        return HttpResponseBadRequest('Need to specify symptom id as URL Parameter')
+
+    grade_id = request.GET.get('grade')
+    if grade_id is None:
+        return HttpResponseBadRequest('Need to specify grade id as URL Parameter')
+
+    symptom = Symptom.objects.get(id=symptom_id)
+
+    if symptom is None:
+        return HttpResponseNotFound('Symptom not found!')
+
+    grade = Grade.objects.get(id=grade_id)
+
+    if grade is None:
+        return HttpResponseNotFound('Grade not found!')
+
+    interventions = Intervention.objects.filter(symptom=symptom, grade=grade)
+
+    tips = Tip.objects.filter(symptom=symptom)
+
+    intervention_response = [ obj.as_dict() for obj in interventions ]
+    tip_response = [ obj.as_dict() for obj in tips ]
+
+    return HttpResponse(json.dumps({"interventions": intervention_response, "tips": tip_response}), content_type='application/json')
