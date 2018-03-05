@@ -4,7 +4,7 @@ from django.views.decorators.http import require_http_methods
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.renderers import JSONRenderer
 from rest_framework.parsers import JSONParser
-from symptomtracker.models import Symptom, SymptomGrade, PatientSymptomGrade
+from symptomtracker.models import Symptom, Grade, SymptomGrade, PatientSymptomGrade, Intervention, Tip
 from symptomtracker.serializers import PatientSymptomGradeSerializer
 import time
 import datetime
