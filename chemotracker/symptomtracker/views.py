@@ -127,9 +127,9 @@ def streak(request):
         delta = compare - date.date()
 
         if delta.days == 1:
-            streak+=1
+            streak += 1
         elif delta.days == 0:
-            pass
+            continue
         else:
             break
         compare = compare + datetime.timedelta(-1)
