@@ -124,7 +124,7 @@ def streak(request):
 
     for current_date in dates:
         date = current_date['recorded_at']
-        delta = compare.date() - date.date()
+        delta = compare - date.date()
 
         if delta.days == 1:
             streak+=1
