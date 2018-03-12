@@ -109,3 +109,28 @@ def get_interventions(request):
     tip_response = [ obj.as_dict() for obj in tips ]
 
     return HttpResponse(json.dumps({"interventions": intervention_response, "tips": tip_response}), content_type='application/json')
+
+
+@require_http_methods(["GET"])
+def streak(request):
+    if request.user is None or not request.user.is_authenticated:
+        return HttpResponseForbidden("Missing or invalid Authorization token")
+
+    today = datetime.date.today()
+    compare = today + datetime.timedelta(1) # Start from tomorrow's date
+    streak = 0
+
+    dates = list(PatientSymptomGrade.objects.values("recorded_at").filter(patient=request.user).order_by("-recorded_at"))
+
+    for current_date in dates:
+        date = current_date['recorded_at']
+        delta = compare.date() - date.date()
+
+        if delta.days == 1:
+            streak+=1
+        elif delta.days == 0:
+            pass
+        else:
+            break
+
+    return HttpResponse(json.dumps({"streak": streak}), content_type='application/json')    
