@@ -132,5 +132,6 @@ def streak(request):
             pass
         else:
             break
+        compare = compare + datetime.timedelta(-1)
 
     return HttpResponse(json.dumps({"streak": streak}), content_type='application/json')    
