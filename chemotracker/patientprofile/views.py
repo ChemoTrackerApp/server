@@ -106,8 +106,8 @@ def get_s3_info(request):
     if user is None or not user.is_authenticated:
         return HttpResponseForbidden("Missing or invalid Authorization token")
 
-    access = 'AKIAIL7EGGDCC47UKY7Q'
-    secret = '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'
+    access = 'AKIAJHQ6TIQX7RRLMLQA'
+    secret = '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'
     region = 'us-east-2'
 
     return HttpResponse(json.dumps({"accessKey": access, "secretKey": secret, "region": region}), content_type='application/json')
