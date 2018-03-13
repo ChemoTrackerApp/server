@@ -21,7 +21,6 @@ def get_profile(request):
     if request.user is None or not request.user.is_authenticated:
         return HttpResponseForbidden("Missing or invalid Authorization token")
 
-    print (request.user.id)
     profile = PatientProfile.objects.filter(user_id=request.user.id)
 
     return HttpResponse(json.dumps(profile[0].as_dict()), content_type='application/json')
