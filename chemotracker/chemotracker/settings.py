@@ -160,9 +160,10 @@ AUTHENTICATION_BACKENDS = (
     # `allauth` specific authentication methods, such as login by e-mail
     "allauth.account.auth_backends.AuthenticationBackend"
 )
-
+    
 ACCOUNT_AUTHENTICATION_METHOD='email'
 ACCOUNT_EMAIL_REQUIRED=True
+ACCOUNT_USERNAME_REQUIRED = False
 REST_AUTH_REGISTER_SERIALIZERS = {
     'REGISTER_SERIALIZER': 'patientprofile.serializers.RegisterSerializer'
 }
