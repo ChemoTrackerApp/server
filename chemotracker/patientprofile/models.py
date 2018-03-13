@@ -7,7 +7,7 @@ from django.dispatch import receiver
 
 class PatientProfile(models.Model):
     user = models.OneToOneField(User, to_field='id', primary_key=True)
-    image = models.URLField(null=True)
+    image = models.URLField(null=True, default='https://i1.wp.com/christopherscottedwards.com/wp-content/uploads/2017/08/Generic-Profile.jpg')
     gender = models.CharField(max_length=30, null=True)
     date_of_birth = models.DateField(null=True)
     phone_number = models.CharField(max_length=30, null=True)
