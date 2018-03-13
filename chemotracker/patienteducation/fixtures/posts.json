@@ -14,7 +14,7 @@
       "fields":{  
          "title": "About Radiation",
          "url": "https://www.cancercareontario.ca/en/cancer-treatments/radiation/about",
-         "content": "Radiation involves using high-energy radiation beams in a very focused way to treat or cure cancer, or to provide relief from cancer symptoms. Approximately half of all cancer patients require radiation treatment at some point during the course of their illness.\nWhat is it?\nRadiation treatment is the use of a certain type of energy (radiation) from X-rays, gamma rays and electrons to destroy cancer cells. In high doses, radiation destroys cells in the area being treated. It does this by damaging the DNA (genetic information) in cancer cell genes, making it impossible for them to grow and divide. During radiation treatment, both cancer cells – which are growing in an uncontrolled way – and healthy cells are affected, but most healthy cells can repair themselves."
+         "content": "Radiation involves using high-energy radiation beams in a very focused way to treat or cure cancer, or to provide relief from cancer symptoms. Approximately half of all cancer patients require radiation treatment at some point during the course of their illness. Radiation treatment is the use of a certain type of energy (radiation) from X-rays, gamma rays and electrons to destroy cancer cells. In high doses, radiation destroys cells in the area being treated. It does this by damaging the DNA (genetic information) in cancer cell genes, making it impossible for them to grow and divide. During radiation treatment, both cancer cells – which are growing in an uncontrolled way – and healthy cells are affected, but most healthy cells can repair themselves."
       }
    },
    {  
@@ -23,7 +23,7 @@
       "fields":{  
          "title": "Breast Screening for Survivors of Breast Cancer",
          "url": "https://www.cancercareontario.ca/en/guidelines-advice/types-of-cancer/43306",
-         "content": "Guideline Objective\nTo determine whether breast cancer survivors can be included in an organized screening program, and to determine the appropriateness and feasibility of conducting surveillance imaging on specific populations of women with PHBC, including individuals who have undergone implant-based reconstructions, reconstructions using autologous tissue flaps, such as the TRAM flaps, or nipple-sparing or skin-sparing mastectomies, or women who have undergone unilateral or bilateral mastectomy without reconstruction"
+         "content": "To determine whether breast cancer survivors can be included in an organized screening program, and to determine the appropriateness and feasibility of conducting surveillance imaging on specific populations of women with PHBC, including individuals who have undergone implant-based reconstructions, reconstructions using autologous tissue flaps, such as the TRAM flaps, or nipple-sparing or skin-sparing mastectomies, or women who have undergone unilateral or bilateral mastectomy without reconstruction"
       }
    },
    {  
@@ -33,6 +33,96 @@
          "title": "Pancreatic Cancer Signs & Symptoms",
          "url": "https://www.mskcc.org/cancer-care/types/pancreatic/symptoms",
          "content": "There are no early warning signs for pancreatic cancer. Symptoms can be so vague that you may not notice them.\nSome people notice the following symptoms as pancreatic cancer evolves:"
+      }
+   },
+   {  
+      "model":"patienteducation.post",
+      "pk":5,
+      "fields":{  
+         "title": "Nausea",
+         "url": "http://www.bccancer.bc.ca/health-info/coping-with-cancer/managing-symptoms-side-effects/nausea",
+         "content": "Nausea (feeling ill or sick to your stomach) or vomiting (throwing up or puking) may be caused by the cancer itself, or the cancer treatments such as chemo therapy, radiation therapy or surgery.\nNausea and throwing up can also happen when first starting pain meds like opioids.\nYou may feel like this for a short time while your body becomes used to the new drug.\nTo help handle your nausea and vomitting you can:\n\tLearn the causes of your nausea and throwing up."
+      }
+   },
+   {  
+      "model":"patienteducation.post",
+      "pk":6,
+      "fields":{  
+         "title": "Vomiting",
+         "url": "https://www.cancer.gov/about-cancer/treatment/side-effects/nausea/nausea-pdq",
+         "content": "Nausea and vomiting are side effects of cancer therapy and affect most patients who have chemotherapy.\nRadiation therapy to the brain, gastrointestinal tract, or liver also cause nausea and vomiting."
+      }
+   },
+   {  
+      "model":"patienteducation.post",
+      "pk":7,
+      "fields":{  
+         "title": "Diarrhea",
+         "url": "http://www.bccancer.bc.ca/health-info/coping-with-cancer/managing-symptoms-side-effects/diarrhea",
+         "content": "Diarrhea is defined as more than two loose or watery stools (\"poop\"), per day.\nDiarrhea is the  opposite of constipation  (hard or infrequent stools)."
+      }
+   },
+   {  
+      "model":"patienteducation.post",
+      "pk":8,
+      "fields":{  
+         "title": "Constipation",
+         "url": "http://www.bccancer.bc.ca/health-info/coping-with-cancer/managing-symptoms-side-effects/constipation",
+         "content": "This is a feeling like you cannot completely move your bowels (\"go poop\"\n"
+      }
+   },
+   {  
+      "model":"patienteducation.post",
+      "pk":9,
+      "fields":{  
+         "title": "Mucositis",
+         "url": "http://www.bccancer.bc.ca/health-info/coping-with-cancer/managing-symptoms-side-effects/mouth-teeth",
+         "content": "Xerostomia (dry mouth) and oral mucositis (redness and sores) are common side effects of cancer treatment."
+      }
+   },
+   {  
+      "model":"patienteducation.post",
+      "pk":10,
+      "fields":{  
+         "title": "Hand-Foot Syndrome",
+         "url": "https://www.cancercareontario.ca/en/symptom-management/35066",
+         "content": "Hand-foot syndrome is a side-effect of some chemotherapy. It is also called Palmar-Plantar Erythrodysesthesia or PPE. It affects the skin on your hands and the bottom of your feet. It usually starts with tingling or swelling of your skin and can become painful, red and numb"
+      }
+   },
+   {  
+      "model":"patienteducation.post",
+      "pk":11,
+      "fields":{  
+         "title": "Skin and Nail Changes",
+         "url": "https://www.cancer.gov/about-cancer/treatment/side-effects/skin-nail-changes",
+         "content": "Radiation therapy can cause the skin on the part of your body receiving radiation therapy to become dry and peel, itch (called pruritus), and turn red or darker. It may look sunburned or tan and be swollen or puffy. Chemotherapy may damage fast growing skin and nail cells. This can cause problems such as skin that is dry, itchy, red, and/or that peels. Some people may develop a rash or sun sensitivity, causing you to sunburn easily. Nail changes may include dark, yellow, or cracked nails and/or cuticles that are red and hurt. Chemotherapy in people who have received radiation therapy in the past can cause skin to become red, blister, peel, or hurt on the part of the body that received radiation therapy; this is called radiation recall."
+      }
+   },
+   {  
+      "model":"patienteducation.post",
+      "pk":12,
+      "fields":{  
+         "title": "Lung Cancer",
+         "url": "https://www.cancercareontario.ca/en/types-of-cancer/lung",
+         "content": "Lung cancer starts in the cells of the lung, which is an organ in the chest. The lungs take in oxygen from the air and release carbon dioxide from the body."
+      }
+   },
+   {  
+      "model":"patienteducation.post",
+      "pk":13,
+      "fields":{  
+         "title": "Prostate Cancer",
+         "url": "https://www.cancercareontario.ca/en/types-of-cancer/prostate",
+         "content": "Prostate cancer starts in the cells of the prostate, which is a small gland in the male reproductive system that produces semen. The prostate gland is located below the bladder in front of the rectum and surrounds the upper part of the urethra. The most common type of prostate cancer is adenocarcinoma of the prostate."
+      }
+   },
+   {  
+      "model":"patienteducation.post",
+      "pk":14,
+      "fields":{  
+         "title": "Prostate Cancer",
+         "url": "https://www.cancercareontario.ca/en/types-of-cancer/prostate",
+         "content": "Prostate cancer starts in the cells of the prostate, which is a small gland in the male reproductive system that produces semen. The prostate gland is located below the bladder in front of the rectum and surrounds the upper part of the urethra. The most common type of prostate cancer is adenocarcinoma of the prostate."
       }
    }
 ]

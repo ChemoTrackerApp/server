@@ -24,7 +24,7 @@ def posts(request):
     	response.append({
     		"title": post.title,
     		"url": post.object.url,
-    		"content": post.content[:100]
+    		"content": post.content[:200]
     	})
 
     return HttpResponse(json.dumps({"posts": response}), content_type='application/json')
