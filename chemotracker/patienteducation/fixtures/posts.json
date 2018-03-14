@@ -68,7 +68,7 @@
       "fields":{  
          "title": "Constipation",
          "url": "http://www.bccancer.bc.ca/health-info/coping-with-cancer/managing-symptoms-side-effects/constipation",
-         "content": "This is a feeling like you cannot completely move your bowels (\"go poop\"\n"
+         "content": "This is a feeling like you cannot completely move your bowels (\"go poop\")\n"
       }
    },
    {  
@@ -104,7 +104,7 @@
       "fields":{  
          "title": "Lung Cancer",
          "url": "https://www.cancercareontario.ca/en/types-of-cancer/lung",
-         "content": "Lung cancer starts in the cells of the lung, which is an organ in the chest. The lungs take in oxygen from the air and release carbon dioxide from the body."
+         "content": "Lung cancer starts in the cells of the lung, which is an organ in the chest. The lungs take in oxygen from the air and release carbon dioxide from the body. There are 2 main types of lung cancer: Non-small cell lung cancer. Small cell lung cancer. To learn more about lung cancer, visit the Canadian Cancer Society. There are several things you can do to lower your risk of lung cancer: The more you smoke and the longer you smoke, the greater your risk is for lung cancer. Smoking is linked to many types of cancer and other diseases. There is no safe kind of tobacco product and no safe amount of smoking. It’s never too late to benefit from becoming smoke-free. If you are already a non-smoker, keep yourself safe by avoiding exposure to other people’s tobacco smoke (second-hand smoke). It may take several tries to quit smoking. If you’ve tried to quit in the past and have started smoking again, don’t give up. Each time you try to quit, you get closer to your goal of being smoke-free forever."
       }
    },
    {  
@@ -113,16 +113,79 @@
       "fields":{  
          "title": "Prostate Cancer",
          "url": "https://www.cancercareontario.ca/en/types-of-cancer/prostate",
-         "content": "Prostate cancer starts in the cells of the prostate, which is a small gland in the male reproductive system that produces semen. The prostate gland is located below the bladder in front of the rectum and surrounds the upper part of the urethra. The most common type of prostate cancer is adenocarcinoma of the prostate."
+         "content": "Prostate cancer starts in the cells of the prostate, which is a small gland in the male reproductive system that produces semen. The prostate gland is located below the bladder in front of the rectum and surrounds the upper part of the urethra. The most common type of prostate cancer is adenocarcinoma of the prostate. The most common type of prostate cancer is adenocarcinoma of the prostate. There are 2 main things you can do to lower your risk of prostate cancer: Your risk increases after age 50 and peaks around 70 to 74. Your risk decreases slightly after age 75, but still remains high. Your risk is higher if you have a father or brother who had prostate cancer. Prostate cancer rates are highest in African men and lowest in Asian men. If you are a man in one of these higher risk groups, talk to your doctor or nurse practitioner about regularly checking your prostate health. If you’re not at a healthy weight, losing even a small amount of weight can help lower the risk to your health. Small changes in your diet and physical activity may be enough to help you become healthier."
       }
    },
    {  
       "model":"patienteducation.post",
       "pk":14,
       "fields":{  
-         "title": "Prostate Cancer",
-         "url": "https://www.cancercareontario.ca/en/types-of-cancer/prostate",
-         "content": "Prostate cancer starts in the cells of the prostate, which is a small gland in the male reproductive system that produces semen. The prostate gland is located below the bladder in front of the rectum and surrounds the upper part of the urethra. The most common type of prostate cancer is adenocarcinoma of the prostate."
+         "title": "Cervical Cancer",
+         "url": "https://www.cancercareontario.ca/en/types-of-cancer/cervical",
+         "content": "Cervical cancer starts in the cells of the cervix. The cervix is part of the female reproductive system. It is the lower, narrow end of the uterus. There are 2 main types of cervical cancer: Squamous cell carcinoma of the cervix, which starts in the cells that line the outside of the cervix. This is the most common type of cervical cancer. Adenocarcinoma of the cervix, which starts in the glandular cells that line the inside of the cervix. These cells make mucus and other fluids. The main cause of cervical cancer is the human papillomavirus (HPV), a common sexually transmitted virus. Learn more about HPV on the human papillomavirus page. There are several things you can do to lower your risk of cervical cancer: The more sexual partners you have, the greater your risk of being infected with HPV. Your risk may also be increased if a partner is a carrier of HPV or has had multiple sexual partners in the past. Most HPV infections occur in the first few years of sexual activity. There is some evidence that regular use of condoms or a diaphragm can help reduce the risk of cervical cancer by reducing exposure to HPV. The evidence is stronger for condoms than diaphragms. It’s important to know that even condoms can’t protect 100% against HPV or eliminate the risk of cervical cancer. The HPV vaccine (Gardasil®) is available at no charge to all Grade 7 girls and boys through Ontario’s publicly funded school-based program. In addition, the HPV vaccine is available on a user-pay basis. It is approved for women up to 45 years of age. If you are a woman, we encourage you to speak to your doctor about getting immunized. It is ideal to have the vaccination before you become sexually active and may be exposed to the HPV virus. However, even if you are already sexually active you may also benefit from the vaccine. The vaccine prevents most but not all cervical cancers. So all women – including those who have received the HPV vaccine – need to be screened regularly for cervical cancer. If a woman who is infected with a high-risk strain of HPV smokes, her risk of cervical cancer increases by up to 80%. Smoking inhibits the immune system, making it harder for the body to fight off infection. As well, smoking is linked to many types of cancer and other diseases. There is no safe kind of tobacco product and no safe amount of smoking. It’s never too late to benefit from becoming smoke-free. If you are already a non-smoker, keep yourself safe by avoiding exposure to other people’s tobacco smoke (second-hand smoke). For more information about quitting smoking, you can visit the Canadian Cancer Society. Pap tests check for cervical cell changes caused by HPV infection. Cervical cancer can sometimes be prevented by following these cell changes closely and treating them if necessary. Regular screening with Pap tests means there is a better chance of finding pre-cancerous cell changes so they can be treated and likely cured before cancer has a chance to develop. Be sure to go for regular Pap tests, and for follow-up testing if your Pap test result is abnormal. See the Screening section below to find out more, including who should get screened for cervical cancer."
+      }
+   },
+   {  
+      "model":"patienteducation.post",
+      "pk":15,
+      "fields":{  
+         "title": "Bladder Cancer",
+         "url": "https://www.cancercareontario.ca/en/types-of-cancer/bladder",
+         "content": "Bladder cancer starts in the lining of the bladder called the urothelium. The most common type of bladder cancer (about 90% of all bladder cancers) is urothelial carcinoma. There are 2 ways to describe bladder cancer: Invasive bladder cancer is when cancer spreads into the connective tissue or muscle in the wall of the bladder. Non-invasive bladder cancer is when the cancer has not spread beyond the urothelium. There are 2 main things you can do to lower your risk of getting bladder cancer: Smoking is linked to many types of cancer and other diseases. There is no safe kind of tobacco product and no safe amount of smoking. If you do not smoke, keep yourself safe by staying away from places where you may breathe in other people’s tobacco smoke (second-hand smoke). It’s never too late to benefit from quitting smoking. If you’ve tried to quit in the past and have started smoking again, don’t give up. Each time you try to quit, you get closer to your goal of quitting forever. To find information on how to quit smoking, visit: Canadian Cancer Society. Smokers’ Helpline. If you work in certain industries or occupations, you may be exposed to chemicals that can increase your risk of bladder cancer, like: arsenic and inorganic arsenic compounds, coal-tar pitch, soot, diesel engine exhaust. Drinking water containing arsenic increases your risk of bladder cancer. Arsenic levels in water vary depending on where you live. If you work in any of these jobs, you may have a risk of chemical exposure: Painter, Hairdresser or barber, Truck or transit driver, Heavy equipment operator, Mechanic, Underground miner. For more information on workplace exposures and bladder cancer, visit the Occupational Cancer Research Centre's page on bladder cancer."
+      }
+   },
+   {  
+      "model":"patienteducation.post",
+      "pk":16,
+      "fields":{  
+         "title": "Ovarian Cancer",
+         "url": "https://www.cancercareontario.ca/en/types-of-cancer/ovarian-cancer",
+         "content": "Ovarian cancer starts in the cells of the ovary, which is part of the female reproductive system. The ovaries are a pair of oval-shaped organs on either side of the uterus. There are 3 main types of ovarian cancer: Epithelial tumours start in epithelial cells. Serous carcinoma is the most common form of epithelial ovarian carcinoma. Stromal tumours start in stromal cells. The most common form of stromal tumour are granulosa cell tumours. Germ cell tumours start in germ cells. It’s the rarest out of the 3 types of ovarian cancer. Examples of germ cell tumours include dysgerminoma and yolk sac tumours. To learn more about ovarian cancer, visit the Canadian Cancer Society. There are several things you can do to lower your risk of ovarian cancer: Smoking is linked to many types of cancer and other diseases. There is no safe kind of tobacco product and no safe amount of smoking. It’s never too late to benefit from becoming smoke-free. If you are already a non-smoker, keep yourself safe by avoiding exposure to other people’s tobacco smoke (second-hand smoke). To find information on how to quit smoking visit: Canadian Cancer Society. Smokers’ Helpline. There is no safe level of exposure to asbestos. For information on workplace exposures and ovarian cancer, visit the Occupational Cancer Research Centre’s Ovarian Cancer Resources page. If you’re not at a healthy weight, losing even a small amount of weight can help lower the risk to your health. Small changes in your diet and physical activity may be enough to help you become healthier. Examples of factors that may put you at a higher risk for ovarian cancer include: having a family history of ovarian cancer, for example, a first-degree or “blood” relative such as a mother, sister or daughter who has been diagnosed with ovarian or breast cancer, especially if they were diagnosed at an early age, having several family members (first and/or second-degree) who have been diagnosed with ovarian or breast cancer, having known or suspected BRCA gene mutations, being of Ashkenazi Jewish descent"
+      }
+   },
+   {  
+      "model":"patienteducation.post",
+      "pk":17,
+      "fields":{  
+         "title": "Types of Cancer",
+         "url": "https://www.cancercareontario.ca/en/types-of-cancer",
+         "content": "There are more than 200 types of cancer, and many possible causes. These include factors such as genetics (changes in your genes), lifestyle choices, certain types of infections, environmental causes or a combination of these. For many possible reasons, cells that make up your body that were once healthy undergo changes that cause them to multiply uncontrollably. Because each type of cancer is so different, there isn’t just one screening process, test or treatment for all types. Here you can learn more about some of the most common types of cancer, how to lower your risks for getting cancer, your screening options, the diagnosis process and possible treatments. You will also find information about some of our tools and programs that help improve care for people with specific types of cancer."
+      }
+   },
+   {  
+      "model":"patienteducation.post",
+      "pk":18,
+      "fields":{  
+         "title": "Colorectal Cancer",
+         "url": "https://www.cancercareontario.ca/en/types-of-cancer/colorectal",
+         "content": "Colorectal cancer starts in the cells of the colon or rectum, which are parts of the large intestine and digestive system. The colon is mainly responsible for absorbing nutrients while the rectum is responsible for removing waste from the body. There are several types of colorectal cancer: Adenocarcinoma is the most common type of colorectal cancer, which occurs in the gland cells that line the wall of the colon or the rectum. Small cell carcinoma and squamous cell carcinoma are much rarer. There are several things you can do to lower your risk of colorectal cancer: People who regularly drink 25 grams (or about 2 standard drinks) of alcohol a day have a 20% increased risk of getting colorectal cancer. People who drink heavily also may not eat a healthy diet. As a result, they may lack nutrients like vitamin D, calcium and folate that appear to help protect against colorectal cancer. Smoking is linked to many types of cancer and other diseases. There is no safe kind of tobacco product and no safe amount of smoking. It’s never too late to benefit from becoming smoke-free. If you are already a non-smoker, keep yourself safe by avoiding exposure to other people’s tobacco smoke (second-hand smoke). It may take several tries to quit smoking. If you’ve tried to quit in the past and have started smoking again, don’t give up. Each time you try to quit, you get closer to your goal of being smoke-free forever. To find information on how to quit smoking visit: Canadian Cancer Society. Smokers’ Helpline. Eating 100 grams of red meat (about the size of a deck of cards) or 50 grams of processed meat a day raises your risk of colorectal cancer by up to 20%. A high-fibre diet may help lower your risk of colorectal cancer. Fibre helps keep the colon healthy by speeding up the removal of stool (poop). You can get fibre from whole grains, vegetables and some fruit. Vegetables and fruit can also help: prevent nutritional deficiencies, provide you with natural sources of cancer-fighting vitamins, help you reach or stay at a healthy weight. If you’re not at a healthy weight, losing even a small amount of weight can help lower the risk to your health. Small changes in your diet and physical activity may be enough to help you become healthier. Being physically active can increase your health, well-being and quality of life, and reduce your risk of cancer. Being “active” doesn’t mean just formal exercise programs — lots of everyday activities, such as gardening, housework, dancing, or walking to work or the store, also count. Many are activities you can do with family or friends. There are risks you inherit from your family. The genes you are born with and whether or not your family members have had cancer both play a part in your risk of getting cancer. Genetic testing can tell if you have genetic changes (mutations) that increase your risk of certain cancers, like colorectal cancer. Although they are relatively rare, some genetic conditions are strongly related to colorectal cancer. They include: familial adenomatous polyposis (FAP) and attenuated FAP, MYH-associated polyposis (MAP), Peutz-Jeghers syndrome, Lynch syndrome, juvenile polyposis. Ontario’s colorectal cancer screening program, ColonCancerCheck, does not screen people who are at high risk of colorectal cancer because of genetic conditions. The program focuses on screening people at average or increased risk. Talk with your doctor or nurse practitioner to see if you would benefit from genetic assessment. For more details on genetic testing, visit the Canadian Cancer Society."
+      }
+   },
+   {  
+      "model":"patienteducation.post",
+      "pk":19,
+      "fields":{  
+         "title": "Cancer Treatments",
+         "url": "https://www.cancercareontario.ca/en/cancer-treatments",
+         "content": "Once a diagnosis is made, and cancer is confirmed, the next step is treatment. There are 3 main ways to treat cancer: surgery, cancer drugs (chemotherapy) and radiation. Other treatments may also be considered, such as biological and hormonal therapies. Exact treatment plans vary from patient to patient. Some may undergo one type of treatment, others a combination. Some might be placed in clinical drug trials. The treatment plan is determined by your type and stage of cancer, and also by the treatments and services you and your healthcare team choose together."
+      }
+   },
+   {  
+      "model":"patienteducation.post",
+      "pk":20,
+      "fields":{  
+         "title": "Kidney Cancer",
+         "url": "https://www.cancercareontario.ca/en/types-of-cancer/kidney",
+         "content": "Kidney cancer starts in the cells of the kidney. The kidneys are located on either side of the spine and are responsible for filtering water and waste from the blood to make urine. There are several types of kidney cancer: Renal cell carcinoma is the most common type of kidney cancer, which happens in cells that line the tubules. Renal sarcoma and primary renal lymphoma are rarer. To learn more about kidney cancer, visit the Canadian Cancer Society. There are a few things you can do to lower your risk of kidney cancer: Having high blood pressure (hypertension) increases your risk of kidney cancer. You can help to keep your blood pressure in a healthy range by: eating a healthy diet that’s low in salt (sodium), maintaining a healthy weight, exercising regularly, not smoking, drinking less alcohol (no more than 1 drink per day for women or 2 per day for men), managing your stress. If you have been prescribed medication to lower your blood pressure, it’s important to take it regularly according to the instructions from your doctor or nurse practitioner. If you’re not at a healthy weight, losing even a small amount of weight can help lower the risk to your health. Small changes in your diet and physical activity may be enough to help you become healthier. Smoking is linked to many types of cancer and other diseases. There is no safe kind of tobacco product and no safe amount of smoking. It’s never too late to benefit from becoming smoke-free. If you are already a non-smoker, keep yourself safe by avoiding exposure to other people’s tobacco smoke (second-hand smoke). It may take several tries to quit smoking. If you’ve tried to quit in the past and have started smoking again, don’t give up. Each time you try to quit, you get closer to your goal of being smoke-free forever. To find information on how to quit smoking visit: Canadian Cancer Society, Smokers’ Helpline. Reduce your exposure to cancer-causing chemicals while at work by following health and safety guidelines. Being exposed to trichloroethylene (used as a metal degreaser) is a risk for kidney cancer. Other substances that may increase your risk are cadmium and cadmium compounds (used in batteries). For more information on workplace exposures and kidney cancer, visit the Occupational Cancer Research Centre’s page on kidney cancer."
+      }
+   },
+   {  
+      "model":"patienteducation.post",
+      "pk":21,
+      "fields":{  
+         "title": "Cancer Statistics",
+         "url": "https://www.cancercareontario.ca/en/data-research/view-data/cancer-statistics",
+         "content": "Cancer Care Ontario monitors and publicly reports on cancer incidence (new cases) and mortality (deaths) over time by place (e.g., Local Health Integration Network) and by person (e.g., age group or sex). We do this work using data stored in the Ontario Cancer Registry."
       }
    }
 ]
